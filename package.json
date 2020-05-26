@@ -1,5 +1,5 @@
 {
-  "name": "portfolio UI",
+  "name": "portfolio-ui",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,8 +14,12 @@
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
+    "react-html-parser": "^2.0.2",
+    "react-linkify": "^1.0.0-alpha",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-transition-group": "^4.4.1"
   },
   "scripts": {
     "start": "react-app-rewired start",
