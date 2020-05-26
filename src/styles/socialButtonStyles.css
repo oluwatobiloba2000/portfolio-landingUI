@@ -1,0 +1,55 @@
+/* socialButtonStyle.css */
+.social-button-container{
+    width: 210px;
+    background-color: white;
+    display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 21px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+.social-svg{
+    box-shadow: 1px 1px 7px 0px #00000087;
+    border-radius: 8px;
+}
+.social-media-container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 250px;
+    height: 180px;
+}
+.social-media-strokeup{
+    width: 87%;
+    height: 1px;
+    position: absolute;
+    top: 96px;
+    background-color: #001529;
+
+}
+.social-media-strokeleft{
+    width: 1px;
+    height: 74%;
+    position: absolute;
+    left: 58px;
+    bottom: 16px;
+    background-color: #001529;
+}
+
+.social-text-1{
+    position: absolute;
+    top: 42px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transform: rotate(90deg);
+    left: 31px;
+}
+.social-text-2{
+    position: absolute;
+    top: 77px;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 1px;
+    left: 81px;
+}
