@@ -1,0 +1,12 @@
+.slide-container{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: #001529;
+    /* transform: translateX(-5%); */
+    transform: translateX(-120%);
+    transition: 0.5s cubic-bezier(0.71, 1.22, 0.58, 1);
+    z-index: 1000000;
+    bottom: 0px;
+    left: 0px;
+}
