@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  font-family: 'poppins', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+#root, .full-height{
+  height: 100%;
+}
