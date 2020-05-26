@@ -1,0 +1,194 @@
+/* About view.css */
+.sidebar-custom{
+    position: fixed;
+    left: 0px;
+    flex: 0 0 200px;
+    max-width: 140px !important;
+    min-width: 140px !important;
+    width: 200px !important;
+    bottom: 4px !important;
+    height: 64vh;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-image: url(../assets/images/Linth.svg);
+    background-size: 331%;
+}
+.sidebar-custom:before{
+    height: 70vh;
+}
+.title{
+    font-size: 77px;
+    display: inline;
+    position: relative;
+    color: gray;
+    font-family: Sacramento, cursive;
+}
+.title:after{
+    content: '';
+    position: absolute;
+    top: 78px;
+    width: 20px;
+    right: -4px;
+    height: 3px;
+    background-color: #818181;
+    -webkit-animation: blinktext 1.5s infinite ease-in-out;
+    animation: blinktext 0.5s infinite ease-in-out;
+}
+.body{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    height: 91%;
+    border-radius: 6px;
+    background-color: white;
+    border: 1px dashed;
+}
+.top-nav{
+    height: 70px;
+}
+.profile-image{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 83px;
+    margin-top: 68px;
+}
+.profile-image div{
+    position: relative;
+    z-index: 1;
+}
+.profile-image img {
+    width: 260px;
+    height: 363px;
+    border-left: 5px solid #f0f2f5;
+    border-bottom: 5px solid #f0f2f5;
+}
+.profile-image div:before {
+    content: '';
+    position: absolute;
+    width: 225px;
+    z-index: -1;
+    height: 268px;
+    left: -57px;
+    top: 129px;
+    background-image: url(/static/media/Linth.e860bedc.svg);
+    background-size: 80% 50%;
+}
+
+.aboutme-header{
+    height: 53px;
+    padding: 0 50px;
+    padding-top: 21px;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 64px;
+    background: #f0f2f5;
+}
+
+.about-content{
+    width: 60%;
+    display: flex;
+    padding: 7.5px;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.about-design-name{
+    font-size: 50px;
+    margin-bottom: 5px;
+    margin-top: 50px;
+    color: #001529;
+    font-family: sacramento, cursive;
+}
+.about-design-text {
+    margin-top: 13px;
+    font-size: 16px;
+}
+.about-send-icon{
+    transform: rotate3d(4, 1, 9, -61deg);
+    font-size: 16px;
+    margin-left: 8px;
+}
+.nav-about{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.margin-right{
+    margin-right: 73px;
+}
+
+@keyframes blinktext{
+    0%{
+        opacity: 1;
+    }50%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+@media all and (max-width: 900px){
+    .profile-image img {
+        width: 204px;
+        height: 287px;
+        border-left: 5px solid #f0f2f5;
+        border-bottom: 5px solid #f0f2f5;
+    }
+    .profile-image div:before {
+        content: '';
+        position: absolute;
+        width: 211px;
+        z-index: -1;
+        height: 223px;
+        left: -45px;
+        top: 108px;
+        background-size: 67% 50%;
+    }
+}
+@media all and (max-width: 760px){
+    .about-design-name {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 5px;
+        margin-top: 50px;
+    }
+    .profile-image div:before {
+        content: '';
+        position: absolute;
+        width: 211px;
+        z-index: -1;
+        height: 223px;
+        left: -27px;
+        top: 94px;
+        background-size: 67% 50%;
+    }
+    .body {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 17px;
+    }
+    .about-content {
+        width: 100%;
+        display: flex;
+        padding: 7.5px;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+    }
+    .profile-image {
+        position: relative;
+        margin-left: 0;
+        margin-top: 25px;
+        z-index: 1;
+    }
+    html.about ,body.about{
+       height: fit-content;
+       overflow-y: scroll;
+    }
+}
+
+
+/* @media all and (max-width: 760px){
+} */
