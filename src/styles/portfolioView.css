@@ -1,0 +1,296 @@
+/*portfolio view styles */
+/* .stack{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 97px;
+    overflow-x: auto;
+}
+.stack p{
+    margin: 0 0px 0px 10px;
+    font-weight: 900;
+    font-size: 17px;
+} */
+/* .skills-grid{
+    grid-template-columns: repeat(auto-fill, 70px);
+    justify-content: space-between;
+    grid-gap: 20px;
+    padding: 0px 12px;
+    width: 100%;
+    display: grid;
+    text-align: center;
+    -ms-grid-template-columns: repeat(auto-fill, 70px);
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+}
+.skills-box{
+    max-width: 70px;
+    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.7;
+    letter-spacing: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #707070;
+}
+.skills-box-img {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+.skills-box-text {
+    word-break: break-all;
+    font-size: 11px;
+    height: 18px;
+    overflow: hidden;
+} */
+/* .portfolio-overall-container{
+    margin-left: -16px;
+    margin-right: -16px;
+    height: 486px;
+    overflow-y: scroll;
+    justify-content: center;
+}
+.portfolio-image{
+    width: 100%;
+    height: 100%;
+}
+.portfolio-container{
+    margin: 10px;
+    background-color: #f0f2f5;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    min-width: 270px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #c3c3c3;
+}
+.project-title{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+} */
+/* .portfolio-pagination{
+    position: absolute;
+    right: 35%;
+} */
+.portfolio-page{
+    background-color: white;
+}
+
+.portfolio-container{
+    position: relative;
+    margin: 0px 77px 0px 0px;
+}
+.portfolio-wallpaper{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: #2283ed;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='946' height='788.3' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.05'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #2283ed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.portfolio-wallpaper-text{
+    color: white;
+    font-size: 70px;
+    margin-top: -321px;
+    margin-left: 20px;
+}
+.portfolio-wallpaper-text p{
+    font-size: 15px;
+    text-indent: 17px;
+    margin-top: -20px;
+    position: relative;
+}
+.portfolio-page .ant-carousel .slick-dots li {
+    /* width: 16px !important; */
+    height: 7px !important;
+}
+.ant-carousel .slick-dots li button {
+    height: 13px;
+    border-radius: 9px;
+}
+.display-tab{
+    background-color: white;
+    height: 100%;
+}
+
+.portfolio-divider{
+    transform: translateX(16px);
+    font-size: 20px;
+    margin-top: -12px;
+    margin-left: 3px;
+}
+
+.number-slides{
+    color: white;
+    top: 10px;
+    right: 59px;
+    position: absolute;
+}
+
+.current-num{
+    font-size: 35px;
+}
+.total-num{
+    float: right;
+    font-size: 18px;
+    transform: translateX(26px);
+}
+
+/* For demo */
+.ant-carousel .slick-slide {
+    height: 100%;
+    line-height: 0px;
+    background: #001529;
+    overflow: hidden;
+  }
+  
+.ant-carousel .slick-slide h3 {
+    color: #fff;
+}
+
+.carousel-div{
+    height: 400px;
+}
+.portfolio-page .slick-track{
+    height: 500px;
+}
+.portfolio-page .carousel-track{
+    width: 65%;
+    position: absolute;
+    left: 17%;
+    bottom: 4%;
+    box-shadow: 7px 7px 7px 1px #02020238;
+    z-index: 1000;
+}
+.portfolio-page .ant-badge-count{
+    background-color: inherit;
+    box-shadow: none;
+    padding: 0px 2px 1px 2px;
+    font-size: 23px;
+}
+
+.ant-carousel .slick-dots li.slick-active {
+    width: 40px;
+}
+.carousel-div{
+    height: 450px;
+}
+.head{
+    height: 45px;
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #8080808f;
+    align-items: center;
+    background-color: #81817e29;
+}
+.display-dots-container{
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60px;
+    margin-left: 14px;
+}
+.dots{
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.red{
+    background-color: #ED594A;
+}
+.yellow{
+    background-color: #FDD800;
+}
+.green{
+    background-color: #5AC05A;
+}
+
+.display-tab-input{
+    margin-left: 6%;
+    position: relative;
+    width: 76%;
+}
+.display-tab-input input{
+    border-radius: 4px;
+    padding-left: 28px;
+    width: 100%;
+    height: 32px;
+    border: .5px solid #b8b8af;
+}
+.portfolio-page .anticon-lock{
+    position: absolute;
+    top: 9px;
+    left: 7px;
+}
+.portfolio-page .ant-typography{
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    right: -8px;
+    top: 10px;
+}
+
+.project-name{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+@media all and (max-width: 1080px){
+    .portfolio-page .carousel-track {
+        width: 75%;
+        left: 13%;
+    }  
+}
+@media all and (max-width: 800px){
+    .portfolio-page .carousel-track {
+        width: 85%;
+        left: 8%;
+    }
+}
+
+@media all and (max-width: 760px){
+    .portfolio-container {
+        position: relative;
+        margin: 60px 0px 0px 0px;
+    }
+    .portfolio-wallpaper-text {
+        color: white;
+        font-size: 41px;
+        margin-top: -351px;
+        margin-left: 20px;
+    }
+    .number-slides {
+        color: white;
+        top: -6px;
+        right: 39px;
+        position: absolute;
+    }
+    .portfolio-page .carousel-track {
+        width: 95%;
+        left: 2%;
+    }
+    .portfolio-divider {
+        font-size: 13px;
+    }
+}
+
+@media all and (max-width: 400px){
+    .display-tab-input {
+        margin-left: 4%;
+        position: relative;
+        width: 66%;
+    }
+    .display-dots-container {
+        margin-left: 7px;
+    }
+}
