@@ -1,0 +1,111 @@
+/*topProfile-sideNav.css*/
+.sidebar {
+    overflow: hidden !important;
+    height: 98vh;
+    z-index: 10;
+    position: fixed;
+    margin-top: 13px;
+    margin-left: 11px;
+    margin-bottom: 20px;
+    border-radius: 29px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    left: 0px;
+    flex: 0 0 200px;
+    max-width: 200px;
+    min-width: 200px;
+    width: 200px;
+    top: -12px !important;
+}
+.sidebar:before {
+    content: '';
+    height: 102vh;
+    position: absolute;
+    margin-top: 13px;
+    top: -47px;
+    margin-left: 11px;
+    margin-bottom: 20px;
+    border-radius: 29px;
+    left: -8px;
+    border: 2px solid #f6cb51;
+    max-width: 200px;
+    min-width: 200px;
+    width: 200px;
+}
+.sidebar-nav-ul{
+    height: 62%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebar-nav-li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-nav-li{
+    display: flex;
+    width: 86% !important;
+    padding: 0 !important;
+    transform: rotate(90deg);
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px !important
+}
+
+
+.sidebar-nav-li>a{
+    font-size: 12px;
+    color: white !important;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: -26px;
+}
+.profile-name{
+    margin-top: 9px;
+    font-size: 24px;
+    color: white;
+}
+.profile-pics{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    border: 5px solid #2293ed94;
+}
+
+.side-nav-container{
+    height: 100%;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #001529;
+    width: 77px;
+}
+
+.ant-menu-item-selected{
+    background: #2283ed !important;
+    border-radius: 6px;
+}
+
+.ant-menu-item-active a{
+    color: rgb(1, 193, 241) !important;
+}
+.top-logo-bg {
+    width: 103%;
+    margin-top: -2px;
+    margin-left: -4px;
+}
+
+.sidenav-socialbtn{
+    background-color: #f0f2f5;
+    border-radius: 20px;
+}
+.nav{
+    height: 100%;
+}
