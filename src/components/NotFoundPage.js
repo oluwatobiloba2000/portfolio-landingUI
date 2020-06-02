@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import { Layout, Button } from 'antd';
 
 const {Footer, Content } = Layout;
 
 
-const NotFound = () =>(
-    <div>
+const NotFound = () =>{
+useEffect(()=>{
+    console.log('render');
+    return ()=>{
+        console.log('unmount');
+    }
+}, [])
+   return(<div>
      <Layout style={{ position: "fixed", top: "0", right: "0", bottom: "0", left: "0"}}>
         <p className="error-title">Oops, We could not find the page you requested</p>
        <Content className="svg-container">
@@ -16,9 +22,48 @@ const NotFound = () =>(
         <Button type="dashed">
             <Link to="/">Go home</Link>
         </Button>
+        {/* {errorMessage}
+        {error === true ? <p>AN ERROR OCCURED</p> : <p>No error jare</p>}
+        <Button onClick={()=> setError({error: true, errorMessage: 'There should be an alert but ant alert did not work'})} type="danger">
+           Call an error
+        </Button>
+        <Button onClick={()=> setError({error: false, errorMessage: null})} type="danger">
+           Cancel an error
+        </Button> */}
        </Footer>
      </Layout>
-    </div>
-)
+    </div>)
+}
+
+
+//USING USE STATE
+// const [{error, errorMessage}, setError] = useState({error: false, errorMessage: null})
+// {error === true ? <p>AN ERROR OCCURED</p> : <p>No error jare</p>}
+// <Button onClick={()=> setError({error: true, errorMessage: 'There should be an alert but ant alert did not work'})} type="danger">
+//    Call an error
+// </Button>
+// <Button onClick={()=> setError({error: false, errorMessage: null})} type="danger">
+//    Cancel an error
+// </Button>
+
+// -----------------------------------------
+// CREATING A CUSTOM HOOK FOR A FORM
+//     FILE: useForm.js
+// import {useState} from "react";
+//
+// export const useForm = initialValues =>{
+//      const [values, setValues] = useState(initialValues);
+//
+//
+//     return [values, e =>{setsetValues({...values, [e.target.name]: e.target.value })}
+//}
+// 
+//  in the form file
+// const [values, handleChange] = useForm({email: '', password: ''});
+// 
+// <input name="email" value={values.email} onChange={handleChange}/>
+// -----------------------------------------
+
+// USING USE EFFECT HOOK
 
 export default NotFound;
