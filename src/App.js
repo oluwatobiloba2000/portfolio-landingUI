@@ -1,7 +1,6 @@
 import React from 'react';
 import {Switch, Route, BrowserRouter as Router} from "react-router-dom";
 import homeView from './views/homeView';
-import Slide from './components/slide';
 import NotFound from './components/NotFoundPage';
 import AboutView from './views/aboutView';
 import resumeView from './views/resumeView';
@@ -25,7 +24,6 @@ class App extends React.Component {
   render(){
     return(
         <Router>
-          <Slide/>
           <Switch>
             <Route  exact={true} path="/" component={homeView}/>
             <Route  path="/about" component={AboutView}/>
