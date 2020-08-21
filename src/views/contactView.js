@@ -26,21 +26,21 @@ class ContactView extends React.Component {
 
   formRef = React.createRef();
 
-  async fetchUserDetails (){
-    const responseForLocation = await fetch(`http://ip-api.com/json`, {
-      method : "GET"
-    })
-    .then(res => res.json())
-    .then(response => response)
-    .catch(e => ()=> setTimeout(()=> this.fetchUserDetails(), 3000))
+  // async fetchUserDetails (){
+  //   const responseForLocation = await fetch(`http://ip-api.com/json`, {
+  //     method : "GET"
+  //   })
+  //   .then(res => res.json())
+  //   .then(response => response)
+  //   .catch(e => ()=> setTimeout(()=> this.fetchUserDetails(), 3000))
   
-    const userCity = responseForLocation["city"];
-    const userCountry = responseForLocation["country"];
-    const userTimezone = responseForLocation["timezone"];
-    if( responseForLocation["city"] && responseForLocation["country"] && responseForLocation["timezone"]){
-      this.setState({userCity, userCountry, userTimezone})
-    }
-  }
+  //   const userCity = responseForLocation["city"];
+  //   const userCountry = responseForLocation["country"];
+  //   const userTimezone = responseForLocation["timezone"];
+  //   if( responseForLocation["city"] && responseForLocation["country"] && responseForLocation["timezone"]){
+  //     this.setState({userCity, userCountry, userTimezone})
+  //   }
+  // }
   
   componentDidMount(){
     ReactGa.initialize('UA-151160030-1');
@@ -50,10 +50,6 @@ class ContactView extends React.Component {
     setTimeout(()=>{
       nprogress.done();
     }, 2000)
-
-    if(!this.state.userCity){
-      this.fetchUserDetails();
-    }
   }
 
   onReset = () => {
@@ -85,7 +81,7 @@ class ContactView extends React.Component {
        category: 'User',
        action: 'A user sent you a message'
      });
-     
+
    this.setState({loading: true})
 
    const hide = message.loading('Sending your message to oluwatobiloba', 0);
