@@ -1,13 +1,17 @@
 import React from 'react';
 import nprogress from 'nprogress';
-import {Layout, Carousel, Badge, Typography, Tooltip } from 'antd';
+import {Layout, Carousel, Badge, Tooltip } from 'antd';
 import UpdatePageTitle from '../components/UpdatePageTitle';
 import HeaderBar from '../container/HeaderBar';
 import {LockOutlined} from '@ant-design/icons';
-import projectImg from '../assets/images/project-pics-sample.png';
+import geoSearchImg from '../assets/images/geo-search.png';
+import {GithubOutlined} from '@ant-design/icons';
+import TrackerImg from '../assets/images/tracker-app.png';
+import chatDesignImg from '../assets/images/css-chat-design.png';
+import ReactGa from 'react-ga';
 // import IndividualPortfolioComponent from '../components/IndividualPortfolioComponent';
 const { Content} = Layout;
-const {Paragraph} = Typography;
+// const {Paragraph} = Typography;
 
 
 
@@ -19,10 +23,11 @@ class PortfolioView extends React.Component {
   }
     onChange = (a, b, c) =>{
      this.setState({currentCaroselCount : a +1})
-    console.log(a, b, c);
   }
   
   componentDidMount(){
+    ReactGa.initialize('UA-151160030-1');
+    ReactGa.pageview(window.location.pathname + window.location.search);
     document.getElementsByTagName('body')[0].classList.add('portfolio-page')
     nprogress.start();
     setTimeout(()=>{
@@ -54,7 +59,7 @@ class PortfolioView extends React.Component {
                   <div className="portfolio-divider">Of</div>
 
                   <Tooltip placement="left" title="total number of projects">
-                    <div className="total-num">11</div>
+                    <div className="total-num">3</div>
                   </Tooltip>
               </div>
              </div>
@@ -70,21 +75,26 @@ class PortfolioView extends React.Component {
                            <div className="display-tab-input">
                              <LockOutlined/>
                             <Tooltip placement="topLeft" title="Project url">
-                             <input type="text" readOnly value="www.trackytodo.netlify.app"/>
+                             <input type="text" readOnly value="https://maintenance-app-tracky.herokuapp.com/"/>
                             </Tooltip>
-
-                             <Paragraph copyable={{text: 'www.tracky.netlify.app'}}></Paragraph>
+                           
+                            <Tooltip placement="topRight" title="Github url">
+                              <a className="project-github-link" href="https://github.com/oluwatobiloba2000/MAINTENANCE_TRACKER" rel="noopener noreferrer" target = {"_blank"} > 
+                                <GithubOutlined />
+                              </a>
+                            </Tooltip>
                            </div>
                         </div>
 
                            <div className="project-container">
-                              <div className="project-details">
-                                <p className="project-name">Team work</p>
-                                
-                              </div>
-                              <div className="project-picture">
-                                <Tooltip placement='right' title="project picture">
-                                  <img src={projectImg} width="100%" height="100%" alt="project name"/>
+                            <div className="project-picture">
+                              <p className="project-name">
+                                <a href="https://maintenance-app-tracky.herokuapp.com/" rel="noopener noreferrer" target = {"_blank"} > 
+                                   Maintenance Tracker App
+                                 </a>
+                                </p>
+                                <Tooltip placement='right' title="Maintenance Tracker">
+                                  <img src={TrackerImg} width="100%" height="95%" alt="Maintenance Tracker"/>
                                 </Tooltip>
                               </div>
                            </div>
@@ -101,11 +111,29 @@ class PortfolioView extends React.Component {
                             <span className="dots green"></span>
                           </div>
                            <div className="display-tab-input">
-                             <LockOutlined />
-                             <input type="text" title="project url" readOnly value="www.geo-search.com"/>
-                             <Paragraph copyable={{text: 'www.geo-search.com'}}></Paragraph>
+                             <LockOutlined/>
+                            <Tooltip placement="topLeft" title="Project url">
+                             <input type="text" readOnly value="https://geo-search.netlify.app/"/>
+                            </Tooltip>
+
+                            <a className="project-github-link" href="https://github.com/oluwatobiloba2000/geo-search" rel="noopener noreferrer" target = {"_blank"} > 
+                              <GithubOutlined />
+                            </a>
                            </div>
                         </div>
+
+                           <div className="project-container">
+                            <div className="project-picture">
+                              <p className="project-name">
+                                <a href="https://geo-search.netlify.app/" rel="noopener noreferrer" target = {"_blank"} > 
+                                   Geo search App
+                                 </a>
+                                </p>
+                                <Tooltip placement='right' title="Geo search App">
+                                  <img src={geoSearchImg} width="100%" height="95%" alt="geo search app"/>
+                                </Tooltip>
+                              </div>
+                           </div>
 
                       </div>
                     </div>
@@ -120,66 +148,28 @@ class PortfolioView extends React.Component {
                           </div>
                            <div className="display-tab-input">
                              <LockOutlined/>
-                             <input type="text" title="project url" readOnly value="www.trackytodo.netlify.app"/>
-                             <Paragraph copyable={{text: 'www.tracky.netlify.app'}}></Paragraph>
+                            <Tooltip placement="topLeft" title="Project url">
+                             <input type="text" readOnly value="https://oluwatobiloba2000.github.io/Chat-app-CSS-illustration/"/>
+                            </Tooltip>
+
+                            <a className="project-github-link" href="https://github.com/oluwatobiloba2000/Chat-app-CSS-illustration" rel="noopener noreferrer" target = {"_blank"} > 
+                              <GithubOutlined />
+                            </a>
                            </div>
                         </div>
 
-
-                      </div>
-                    </div>
-
-                    <div className="carousel-div">
-                    <div className="display-tab">
-                        <div className="head">
-                          <div className="display-dots-container">
-                            <span className="dots red"></span>
-                            <span className="dots yellow"></span>
-                            <span className="dots green"></span>
-                          </div>
-                           <div className="display-tab-input">
-                             <LockOutlined />
-                             <input type="text" title="project url" readOnly value="www.geo-search.com"/>
-                             <Paragraph copyable={{text: 'www.geo-search.com'}}></Paragraph>
+                           <div className="project-container">
+                            <div className="project-picture">
+                              <p className="project-name">
+                                <a href="https://oluwatobiloba2000.github.io/Chat-app-CSS-illustration/" rel="noopener noreferrer" target = {"_blank"} > 
+                                  Chat app CSS illustration
+                                 </a>
+                                </p>
+                                <Tooltip placement='right' title="css design">
+                                  <img src={chatDesignImg} width="100%" height="95%" alt="Chat app CSS illustration"/>
+                                </Tooltip>
+                              </div>
                            </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <div className="carousel-div">
-                      <div className="display-tab">
-                        <div className="head">
-                          <div className="display-dots-container">
-                            <span className="dots red"></span>
-                            <span className="dots yellow"></span>
-                            <span className="dots green"></span>
-                          </div>
-                           <div className="display-tab-input">
-                             <LockOutlined/>
-                             <input type="text" title="project url" readOnly value="www.trackytodo.netlify.app"/>
-                             <Paragraph copyable={{text: 'www.tracky.netlify.app'}}></Paragraph>
-                           </div>
-                        </div>
-
-
-                      </div>
-                    </div>
-
-                    <div className="carousel-div">
-                    <div className="display-tab">
-                        <div className="head">
-                          <div className="display-dots-container">
-                            <span className="dots red"></span>
-                            <span className="dots yellow"></span>
-                            <span className="dots green"></span>
-                          </div>
-                           <div className="display-tab-input">
-                             <LockOutlined />
-                             <input type="text" title="project url" readOnly value="www.geo-search.com"/>
-                             <Paragraph copyable={{text: 'www.geo-search.com'}}></Paragraph>
-                           </div>
-                        </div>
 
                       </div>
                     </div>

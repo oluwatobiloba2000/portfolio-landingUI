@@ -53,7 +53,7 @@
 }
 
 .form{
-    width: 60%;
+    width: 100%;
     border: 1px solid white;
     height: 100%;
     background-color: white;
@@ -73,15 +73,15 @@
     width: 60px;
     height: 60px;
 }
-.contact-info{
+/* .contact-info{
     position: relative;
     width: 40%;
     background-color: #001529;
-}
+} */
 .contact-page .ant-col-8 {
     flex: 0 0 21.333333% !important;
 }
-.contact-page .ant-btn-primary {
+.contact-page .submit-btn-container>.ant-btn-primary {
     color: #fff;
     background-color: #2283ed !important;
     border-color: #2283ed !important;
@@ -90,7 +90,7 @@
     border-radius: 39px;
     font-size: 25px;
 }
-.contact-page .ant-btn-primary span {
+.contact-page .submit-btn-container>.ant-btn-primary span {
     transform: rotate3d(0, 0, 2, -21deg);
 }
 .contact-page #complex-form_message{
@@ -153,6 +153,7 @@
 }
 .form{
     width: 100%;
+    height: 120%;
     overflow-y: auto;
 }
 .ant-form{

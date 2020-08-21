@@ -43,6 +43,10 @@
     background-color: white;
     border: 1px dashed;
 }
+
+.about .ant-spin-nested-loading, .ant-spin-nested-loading>.ant-spin-container{
+    height: 96%;
+}
 .top-nav{
     height: 70px;
 }

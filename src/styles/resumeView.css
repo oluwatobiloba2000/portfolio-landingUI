@@ -64,11 +64,21 @@ background-attachment: fixed;
     list-style-type: none;
 }
 .resume-name{
+    display: flex;
+    flex-direction: column;
     font-weight: 600;
+    text-align: center;
     margin-top: -36px;
     font-size: 30px;
     padding: 0px 10px 0px 10px;
 }
+
+.resume-name>p{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 200;
+}
+
 .resume-left-box ul li{
     display: flex;
     justify-content: flex-end;
@@ -86,13 +96,14 @@ background-attachment: fixed;
 }
 
 .top-right-section-box-header{
-    margin-top: 16px;
     margin-bottom: 8px;
     color: #eff680;
     font-size: 20px;
 }
 .top-right-section-box{
     height: 55%;
+    overflow-y: auto;
+    margin-top: 15px;
 }
 
 /*INDIVIDUAL RESUME STARTS*/
@@ -121,7 +132,7 @@ background-attachment: fixed;
 }
 .resume-body,.year{
     width: 50%;
-    margin-top: 20px;
+    margin-top: 2px;
     color: #adadad;
 }
 
@@ -147,12 +158,13 @@ background-attachment: fixed;
 
 .resume-individual-container{
     height: 83%;
+    margin-right: 10px;
     overflow-y: auto;
     position: relative;
 }
 .bottom-right-section-box{
     display: flex;
-    height: 45%;
+    height: 40%;
 }
 
 .education-and-hobbies-container{
@@ -176,6 +188,7 @@ background-attachment: fixed;
 }
 .education-location{
     color: #adadad;
+    margin-right: 12px;
 }
 .hobbies-container{
     height: 50%;
@@ -275,8 +288,8 @@ background-attachment: fixed;
     .resume-name {
         font-weight: 600;
         margin-top: -36px;
-        font-size: 30px;
-        padding: 0px 0px 0px 0px;
+        font-size: 23px;
+        padding: 20px 0px 0px 0px;
     }
     .bottom-right-section-box {
         display: flex;

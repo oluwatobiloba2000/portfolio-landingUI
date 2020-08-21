@@ -6,75 +6,26 @@ const IndividualResumeComponent = () =>(
          <div className="resume">
              <ul>
                  <li className="resume-top">
-                  <p className="resume-title">Teencode academy</p>
+                  <p className="resume-title">Bridge ng start-up.</p>
                     <div className="resume-role">
-                        Product manager & Frontend developer
+                     Full-stack developer
                     </div>
                  </li>
                  <li className="resume-bottom">
-                    <p className="year">April 2020 - Aug 2020</p>
-                    <div className="resume-body">The first Intern I attended,</div>
+                    <p className="year">Dec. 2019 - Present</p>
+                      <div className="resume-body">
+                        ● Work as part of the technology team responsible for
+                          Building the rest APIs.<br/>
+                        ● Also building out a new feature that serves the
+                        company's business goals.
+                                                <br/>
+                                                <br/>
+                        Tech Stack/Tools: NodeJs, Postgres SQL, Javascript, HTML5 Mocha & chai, and Git Version Control.
+                    </div>
                  </li>
              </ul>
         </div>
 
-        <div className="resume">
-             <ul>
-                 <li className="resume-top">
-                  <p className="resume-title">Findworka academy</p>
-                    <div className="resume-role">
-                      Backend Intern
-                    </div>
-                 </li>
-                 <li className="resume-bottom">
-                <p className="year">Sep 2020 - Feb 2021</p>
-                <div className="resume-body">I applied as an Intern and got the job</div>
-                 </li>
-             </ul>
-        </div>
-
-        <div className="resume">
-             <ul>
-                 <li className="resume-top">
-                  <p className="resume-title">Naijahacks Hackathon</p>
-                    <div className="resume-role">
-                      Winner
-                    </div>
-                 </li>
-                 <li className="resume-bottom">
-                <p className="year">Dec 2019 - Jan 2020</p>
-                <div className="resume-body">Me and my team won Job creation category</div>
-                 </li>
-             </ul>
-        </div>
-        <div className="resume">
-             <ul>
-                 <li className="resume-top">
-                  <p className="resume-title">Naijahacks Hackathon</p>
-                    <div className="resume-role">
-                      Winner
-                    </div>
-                 </li>
-                 <li className="resume-bottom">
-                <p className="year">Dec 2019 - Jan 2020</p>
-                <div className="resume-body">Me and my team won Job creation category</div>
-                 </li>
-             </ul>
-        </div>
-        <div className="resume">
-             <ul>
-                 <li className="resume-top">
-                  <p className="resume-title">Naijahacks Hackathon</p>
-                    <div className="resume-role">
-                      Winner
-                    </div>
-                 </li>
-                 <li className="resume-bottom">
-                <p className="year">Dec 2019 - Jan 2020</p>
-                <div className="resume-body">Me and my team won Job creation category</div>
-                 </li>
-             </ul>
-        </div>
         </div>
 
 )

@@ -7,38 +7,40 @@ import IndividualSkillsComponent from '../components/IndividualSkillsContainer';
 import UpdatePageTitle from '../components/UpdatePageTitle';
 import SocialButton from '../components/socialButton';
 import { DownloadOutlined } from '@ant-design/icons';
+import ReactGa from 'react-ga';
 const { Paragraph } = Typography;
 const { Content} = Layout;
 
 
-
-
-
 class AboutView extends React.Component {
   state = {
-    loading:false
+    loading:false,
+    name: '',
+    cvLink: '',
+    education: '',
+    resume: '',
+    hobbies: '',
+    skills: ''
   };
 
-  // enterLoading = index => {
-    // const newLoadings = [...this.state.loadings];
-    // newLoadings[index] = true;
-    // this.setState({
-    //   loadings: newLoadings,
-    // });
-    // setTimeout(() => {
-      // newLoadings[index] = false;
-      // this.setState({ loadings: newLoadings });
-    // }, 6000);
-  // };
+
   componentDidMount(){
+    ReactGa.initialize('UA-151160030-1');
+    ReactGa.pageview(window.location.pathname + window.location.search);
     this.setState({loading: true})
     document.getElementsByTagName('body')[0].classList.add('resume-page')
     nprogress.start();
-    setTimeout(()=>{
-      this.setState({loading: false})
-     nprogress.done();
-    }, 2000)
+
+    setTimeout(()=>{ nprogress.done(); this.setState({loading: false}) }, 500)
   }
+
+  recordDownloadResume(){
+    ReactGa.event({
+      category: 'User',
+      action: 'Viewed/download your resume'
+    });
+  }
+
   componentWillUnmount(){
     document.getElementsByTagName('body')[0].classList.remove('resume-page')
   }
@@ -51,26 +53,44 @@ class AboutView extends React.Component {
         <Content className="resume-content-container">
           <div className="resume-left-section">
             <div className="resume-left-box resume-name">
-           <Skeleton active paragraph={{ rows: 1 }} loading={this.state.loading}>
-              Anani Oluwatobiloba
+            <Skeleton active paragraph={{ rows: 1 }} loading={this.state.loading}>
+              <span style={{fontSize: '25px', marginTop: '20px'}}>ANANI PAUL OLUWATOBILOBA</span> 
+              <p>SOFTWARE ENGINEER</p>
             </Skeleton>
             </div>
 
             <div className="resume-left-box details">
             <Skeleton active paragraph={{ rows: 3 }} loading={this.state.loading}>
-                  {/* TODO: MAKE THE RIGHT TEXT COPYABLE USING ANT COPY UI*/}
-                  {/* TODO: ADD REACT LINKFY HERE TO MAKE LINKS CLICKABLE*/}
               <ul>
-                {/* <li>
-                 <Paragraph copyable={{text: '+23408109263085'}}>+23408109263085</Paragraph>
-                </li> */}
                 <li>
                   <Paragraph copyable={{ text: 'ananioluwatobiloba2000@gmail.com' }}>
-                   <a target={"_blank"} rel="noopener noreferrer" href={"mailto:ananioluwatobiloba2000@gmail.com"}>ananioluwatobiloba2000@gmail.com</a>
+                   <a onClick={()=>{ 
+                     ReactGa.event({
+                      category: 'User',
+                      action: 'clicked on your email address in your resume page'
+                    });
+                   }} target={"_blank"} rel="noopener noreferrer" href={"mailto:ananioluwatobiloba2000@gmail.com"}>ananioluwatobiloba2000@gmail.com</a>
                   </Paragraph>
                 </li>
                 <li>
-                  <Paragraph copyable={{text: 'www.oluwatobiloba.com'}}>www.oluwatobiloba.com</Paragraph>
+                  <Paragraph copyable={{text: 'https://www.linkedin.com/in/anani-oluwatobiloba-967728183/'}}>
+                  <a onClick={()=>{ 
+                     ReactGa.event({
+                      category: 'User',
+                      action: 'clicked on your linkedIn account in your resume page'
+                    });
+                   }}target={"_blank"} rel="noopener noreferrer" href={"https://www.linkedin.com/in/anani-oluwatobiloba-967728183/"}>Linkedin/me</a>
+                  </Paragraph>
+                </li>
+                <li>
+                  <Paragraph copyable={{text: '   https://github.com/oluwatobiloba2000'}}>
+                  <a onClick={()=>{ 
+                     ReactGa.event({
+                      category: 'User',
+                      action: 'clicked on your github in your resume page'
+                    });
+                   }} target={"_blank"} rel="noopener noreferrer" href={"https://github.com/oluwatobiloba2000"}>Github/me</a>
+                  </Paragraph>
                 </li>
               </ul>
               </Skeleton>
@@ -78,7 +98,8 @@ class AboutView extends React.Component {
 
             <div className="resume-left-box description-text">
               <Skeleton active paragraph={{ rows: 1 }} loading={this.state.loading}>
-                I'm a frontend & backend developer, I love solving coding problems.
+               Enthusiastic software engineer eager to contribute to team success through hard work, attention to detail, and excellent organizational skills. I merge a passion for usability and user experience with technical knowledge 
+               to create cool digital experiences.
               </Skeleton>
             </div>
 
@@ -89,44 +110,68 @@ class AboutView extends React.Component {
           
           <div className="resume-right-section">
             <div className="top-right-section-box">
-              <h3 className="top-right-section-box-header">Experience</h3>
-                <IndividualResumeComponent />
+              <div>
+                <h3 className="top-right-section-box-header">PROJECT</h3>
+
+                 <div style={{fontSize: '11px', color: 'white'}} className="project">
+                  <a target={"_blank"}  rel="noopener noreferrer" href={"https://maintenance-app-tracky.herokuapp.com"}>Maintenance Tracker App</a>
+                   <p><a target={"_blank"} rel="noopener noreferrer" href={"https://github.com/oluwatobiloba2000/MAINTENANCE_TRACKER"}>- Github</a></p>
+                  <p>
+                    The App is an application that provides users with the ability to reach out to operations or repairs departments regarding repair or maintenance requests and monitor the status of their request.
+                  </p>
+                  <h3 style={{color: 'white'}}>NODE.JS | EXPRESS | POSTGRESQL</h3>
+                  <p>
+                    ● Developed the backend API using Node.js &nbsp;
+                    ● Developed the frontend using HTML5 and CSS &nbsp;
+                    ● Testing
+                  </p>
+                 </div>
+
+              </div>
+              <div>
+                <h3 className="top-right-section-box-header">EMPLOYMENT HISTORY</h3>
+                  <IndividualResumeComponent />
+              </div>
             </div>
+
+            
+         
 
             <div className="bottom-right-section-box">
 
               <div className="education-and-hobbies-container">
                 <div className="education-container">
                   <h3 className="top-right-section-box-header">Education</h3>
-                  <Skeleton active paragraph={{ rows: 2 }} loading={this.state.loading} >
+
                   <ul>
                     <li>
-                      <p className="education-title">Bachelor in computer science</p>
-                      <p className="education-location">Graduated from Unilag in 2024</p>
+                      <p className="education-title">High School Certificate</p>
+                      <p className="education-location">Intellect companion classic college - 2016 - 2018</p>
                     </li>
                   </ul>
-                  </Skeleton>
+        
                 </div>
 
                 <div className="hobbies-container">
-                <h3 className="top-right-section-box-header hobbies-headder">Hobbies</h3>
-                <Skeleton active paragraph={{ rows: 1 }} loading={this.state.loading}>
+                <h3 className="top-right-section-box-header hobbies-headder">INTERESTS</h3>
+             
                   <p className="hobbies-list">
-                    Gaming, sporting, running, watching movies, reading documentation, cooking
+                    Mostly interested in building automated systems for businesses using tech, love running, and road marathons.
                   </p>
-                </Skeleton>
+ 
                 </div>
               </div>
 
               <div className="skills-container">
-                <h3 className="top-right-section-box-header skills-header">Skills</h3>
+                <h3 className="top-right-section-box-header skills-header">SKILLS AND ABILITIES</h3>
                   <div className="skills-grid">
                    <IndividualSkillsComponent />
                  </div>
 
-                   <a href="www.cloudinaryportfolio.pdf" rel="noopener noreferrer" target = {"_blank"} > 
-                    <Tooltip placement="left" title="download resume">
+                   <a href="https://drive.google.com/file/d/1pnFG-23cQg_ngcKj1tAuineRZeguXIwf/view" onClick={this.recordDownloadResume} rel="noopener noreferrer" target = {"_blank"} > 
+                    <Tooltip placement="left" title="Download CV">
                       <div className="download-resume-container">
+                        <span style={{fontSize: '20px', marginRight: '5px'}}>Download</span>
                         <DownloadOutlined />
                       </div>
                     </Tooltip>

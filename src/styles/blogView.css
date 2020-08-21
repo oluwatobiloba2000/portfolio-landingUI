@@ -238,11 +238,9 @@
     border: 5px solid white;
     height: 405px;
 }
-.project-details{
-    width: 50%;
-}
+
 .project-picture{
-    width: 50%;
+    width: 100%;
 }
 .filter-svg-blog{
     margin-top: 96%;

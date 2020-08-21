@@ -1,27 +1,30 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Switch, Route, BrowserRouter as Router} from "react-router-dom";
 import homeView from './views/homeView';
 import NotFound from './components/NotFoundPage';
 import AboutView from './views/aboutView';
 import resumeView from './views/resumeView';
 import portfolioView from './views/portfolioView';
-import blogView from './views/blogView';
+// import blogView from './views/blogView';
 import contactView from './views/contactView';
 // import SingleBlog from './container/singleBlogContainer';
 import './App.css';
+import ReactGa from 'react-ga'
+// const axios = require('axios').default;
+// axios.defaults.baseURL = 'http://localhost:4000';
+// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
+// Tracking Id UA-151160030-1
 
+function App (){
+  const currentWindow = window.location.pathname;
+  useEffect(()=>{
+    ReactGa.initialize('UA-151160030-1');
 
-class App extends React.Component {
-  // componentDidMount(){
-  //     window.addEventListener('blur', (e)=>{
-  //     console.log("EVENT: window blur",e.target.location.pathname)
-  //   })
-  //   window.addEventListener('focus', (e)=>{
-  //     console.log('Event : window on focus',e.target.location.pathname)
-  //   })
-  // }
-  render(){
+    // report page view
+    ReactGa.pageview(currentWindow + window.location.search);
+  }, [currentWindow])
+
     return(
         <Router>
           <Switch>
@@ -29,14 +32,12 @@ class App extends React.Component {
             <Route  path="/about" component={AboutView}/>
             <Route  path="/resume" component={resumeView}/>
             <Route path="/portfolio" component={portfolioView}/>
-            <Route path="/blog" component={blogView}/>
+            {/* <Route path="/blog" component={blogView}/> */}
             <Route path="/contact" component={contactView}/>
-              {/* <Route  path="/blog/view/:id" component={blogView}/> */}
             <Route component={NotFound} />
            </Switch>
         </Router>
     )
-  }
 }
 
 

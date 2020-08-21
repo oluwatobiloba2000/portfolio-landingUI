@@ -1,6 +1,7 @@
 import {Link, useLocation} from 'react-router-dom';
 import React, {useEffect, useState} from 'react';
 import {Spin, Typography} from 'antd';
+import blogImg from '../assets/images/lasVegas.jpg';
 
 import {EyeOutlined,
   CommentOutlined,
@@ -86,37 +87,39 @@ const  BlogList = ()=> {
     return (
       <Spin size="large" spinning={loading}>
              {
-           <>{message === 'success' ?<div className="blog">
-           <p  className="blog-date">1st June 2020</p>
-          
-            <Link onClick={onAddBlogActive} to="/blog/2">
-               <h3 data-blogid="3572554724245438" className="blog-title">Full stack web development - The complete roadmap</h3>
-            </Link>
-              <div className="top">
-                  <p className="time-posted"><ClockCircleOutlined/> 2 mins ago</p>
-                  <p><CommentOutlined/><span className="comment-values">20</span></p>
-                  {/* TODO: ADD BADGE THAT ANIMATES WHEN INCREASED */}
-                  <span><EyeOutlined/><span className="blog-views-value">10</span></span>
-              </div>
-              {/* TODO: elpisis here ......... */}
-              <div className="blog-body-preview">
-              <Paragraph
-                  ellipsis={{
-                    rows: 2,
-                    expandable: false
-                  }}
-                  title={`TODO: title here`}
-                >
-                  Learning web development is a huge advantage for a biginner, even understanding the basis will be extremely useful Learning web development is a
-                  huge advantage for a biginner, even understanding the basis will be extremely usefu Learning web development is a huge advantage for a biginner, even understanding the basis will be extremely useful Learning web development is a
-                  huge advantage for a biginner, even understanding the basis will be extremely usefu
-                  Learning web development is a huge advantage for a biginner, even understanding the basis will be extremely useful ...
-                </Paragraph>
-              </div>
-              <div className="tag-container">
-               <p title="tag" className="tag"><TagOutlined/> Coding</p>
-              </div>
-            </div>
+           <>{message === 'success' ?
+           <div className="blog">
+             <img src={blogImg} alt="blog" style={{width: "100%", height: "180px", borderRadius: "20px"}}/>
+              <p  className="blog-date">1st June 2020</p>
+              
+                <Link onClick={onAddBlogActive} to="/blog/2">
+                  <h3 data-blogid="3572554724245438" className="blog-title">Full stack web development - The complete roadmap</h3>
+                </Link>
+                  <div className="top">
+                      <p className="time-posted"><ClockCircleOutlined/> 2 mins ago</p>
+                      <p><CommentOutlined/><span className="comment-values">20</span></p>
+                      {/* TODO: ADD BADGE THAT ANIMATES WHEN INCREASED */}
+                      <span><EyeOutlined/><span className="blog-views-value">10</span></span>
+                  </div>
+                  {/* TODO: elpisis here ......... */}
+                  <div className="blog-body-preview">
+                  <Paragraph
+                      ellipsis={{
+                        rows: 2,
+                        expandable: false
+                      }}
+                      title={`TODO: title here`}
+                    >
+                      Learning web development is a huge advantage for a biginner, even understanding the basis will be extremely useful Learning web development is a
+                      huge advantage for a biginner, even understanding the basis will be extremely usefu Learning web development is a huge advantage for a biginner, even understanding the basis will be extremely useful Learning web development is a
+                      huge advantage for a biginner, even understanding the basis will be extremely usefu
+                      Learning web development is a huge advantage for a biginner, even understanding the basis will be extremely useful ...
+                    </Paragraph>
+                  </div>
+                  <div className="tag-container">
+                  <p title="tag" className="tag"><TagOutlined/> Coding</p>
+                  </div>
+                </div>
            : message === 'error' ? <p>{tagMessage}</p>
            : message === 'notFound' ? 'No Blog Found'
           : ''
