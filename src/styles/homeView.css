@@ -81,14 +81,14 @@
     margin-top: 0;
 }
 
-.img-home-preview img{
-    width: 100%;
+/* .img-home-preview svg{
+    width: 95%;
     height: 100%;
     transition: transform .5s ease-in-out;
 }
-.img-home-preview img:hover{
+.img-home-preview svg:hover{
     transform: scale(1.05);
-}
+} */
 /* .img-home-preview:after{
     content: '';
     position: absolute;
@@ -137,6 +137,7 @@
     z-index: 1;
 }
 .home-right-text{
+    text-align: center;
     position: relative;
     height: 15%;
     display: flex;
