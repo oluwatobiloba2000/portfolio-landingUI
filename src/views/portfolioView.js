@@ -6,7 +6,6 @@ import HeaderBar from '../container/HeaderBar';
 import {LockOutlined} from '@ant-design/icons';
 import geoSearchImg from '../assets/images/geo-search.png';
 import {GithubOutlined} from '@ant-design/icons';
-import TrackerImg from '../assets/images/tracker-app.png';
 import chatDesignImg from '../assets/images/css-chat-design.png';
 import ReactGa from 'react-ga';
 // import IndividualPortfolioComponent from '../components/IndividualPortfolioComponent';
@@ -75,11 +74,11 @@ class PortfolioView extends React.Component {
                            <div className="display-tab-input">
                              <LockOutlined/>
                             <Tooltip placement="topLeft" title="Project url">
-                             <input type="text" readOnly value="https://maintenance-app-tracky.herokuapp.com/"/>
+                             <input type="text" readOnly value="https://sendit.netlify.app/"/>
                             </Tooltip>
                            
                             <Tooltip placement="topRight" title="Github url">
-                              <a className="project-github-link" href="https://github.com/oluwatobiloba2000/MAINTENANCE_TRACKER" rel="noopener noreferrer" target = {"_blank"} > 
+                              <a className="project-github-link" href="https://github.com/oluwatobiloba2000/SendIT" rel="noopener noreferrer" target = {"_blank"} > 
                                 <GithubOutlined />
                               </a>
                             </Tooltip>
@@ -89,18 +88,55 @@ class PortfolioView extends React.Component {
                            <div className="project-container">
                             <div className="project-picture">
                               <p className="project-name">
-                                <a href="https://maintenance-app-tracky.herokuapp.com/" rel="noopener noreferrer" target = {"_blank"} > 
-                                   Maintenance Tracker App
+                                <a href="https://sendit.netlify.app/" rel="noopener noreferrer" target = {"_blank"} > 
+                                  SendIt courier service
                                  </a>
                                 </p>
-                                <Tooltip placement='right' title="Maintenance Tracker">
-                                  <img src={TrackerImg} width="100%" height="95%" alt="Maintenance Tracker"/>
+                                <Tooltip placement='right' title="SendIt">
+                                  <img src={"https://res.cloudinary.com/oluwatobby/image/upload/v1618926762/SendIT_zuejc0.png"} width="100%" height="95%" alt="Maintenance Tracker"/>
                                 </Tooltip>
                               </div>
                            </div>
 
                       </div>
                     </div>
+
+                    <div className="carousel-div">
+                    <div className="display-tab">
+                        <div className="head">
+                          <div className="display-dots-container">
+                            <span className="dots red"></span>
+                            <span className="dots yellow"></span>
+                            <span className="dots green"></span>
+                          </div>
+                           <div className="display-tab-input">
+                             <LockOutlined/>
+                            <Tooltip placement="topLeft" title="Project url">
+                             <input type="text" readOnly value="https://teamily.netlify.app/"/>
+                            </Tooltip>
+
+                            <a className="project-github-link" href="https://github.com/oluwatobiloba2000/team-work" rel="noopener noreferrer" target = {"_blank"} > 
+                              <GithubOutlined />
+                            </a>
+                           </div>
+                        </div>
+
+                           <div className="project-container">
+                            <div className="project-picture">
+                              <p className="project-name">
+                                <a href="https://teamily.netlify.app/" rel="noopener noreferrer" target = {"_blank"} > 
+                                   teamily
+                                 </a>
+                                </p>
+                                <Tooltip placement='right' title="teamily">
+                                  <img src={'https://res.cloudinary.com/oluwatobby/image/upload/v1618926778/Teamily_shot_o7merp.png'} width="100%" height="95%" alt="team work app"/>
+                                </Tooltip>
+                              </div>
+                           </div>
+
+                      </div>
+                    </div>
+
 
                     <div className="carousel-div">
                     <div className="display-tab">
