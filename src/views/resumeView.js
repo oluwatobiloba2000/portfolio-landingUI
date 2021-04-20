@@ -114,15 +114,15 @@ class AboutView extends React.Component {
                 <h3 className="top-right-section-box-header">PROJECT</h3>
 
                  <div style={{fontSize: '11px', color: 'white'}} className="project">
-                  <a target={"_blank"}  rel="noopener noreferrer" href={"https://maintenance-app-tracky.herokuapp.com"}>Maintenance Tracker App</a>
-                   <p><a target={"_blank"} rel="noopener noreferrer" href={"https://github.com/oluwatobiloba2000/MAINTENANCE_TRACKER"}>- Github</a></p>
+                  <a target={"_blank"}  rel="noopener noreferrer" href={"https://sendit.netlify.app/"}>SendIt</a>
+                   <p><a target={"_blank"} rel="noopener noreferrer" href={"https://github.com/oluwatobiloba2000/SendIT"}>- Github</a></p>
                   <p>
-                    The App is an application that provides users with the ability to reach out to operations or repairs departments regarding repair or maintenance requests and monitor the status of their request.
+                  SendIt  is an application that brings courier service companies to one place, it helps users deliver parcels to different destinations. 
                   </p>
-                  <h3 style={{color: 'white'}}>NODE.JS | EXPRESS | POSTGRESQL</h3>
+                  <h3 style={{color: 'white'}}>REACTJS | REDUX | NODE.JS | EXPRESS | POSTGRESQL | SOCKET.IO</h3>
                   <p>
-                    ● Developed the backend API using Node.js &nbsp;
-                    ● Developed the frontend using HTML5 and CSS &nbsp;
+                    ● Developed the backend API using Node.js, Express and Socket.io &nbsp;
+                    ● Developed the frontend using ReactJs and Redux &nbsp;
                     ● Testing
                   </p>
                  </div>
