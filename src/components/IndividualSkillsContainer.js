@@ -31,6 +31,14 @@ const IndividualSkillsComponent = () =>(
             <img src={expressimg} className="skills-box-img" alt="express"/>
             <div className="skills-box-text">Express</div>
         </a>
+        <a rel="noopener noreferrer" target={"_blank"} href="http://socket.io/" className="skills-box">
+            <img src={'https://img.stackshare.io/service/1161/vI0ZZlhZ_400x400.png'} className="skills-box-img" alt="express"/>
+            <div className="skills-box-text">Socket.io</div>
+        </a>
+        <a rel="noopener noreferrer" target={"_blank"} href="https://www.heroku.com/" className="skills-box">
+            <img src={'https://img.stackshare.io/service/133/3wgIDj3j.png'} className="skills-box-img" alt="express"/>
+            <div className="skills-box-text">Socket.io</div>
+        </a>
     </>
 
 )
