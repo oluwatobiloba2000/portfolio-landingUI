@@ -73,7 +73,7 @@ class AboutView extends React.Component {
                   </Paragraph>
                 </li>
                 <li>
-                  <Paragraph copyable={{text: 'https://www.linkedin.com/in/anani-oluwatobiloba-967728183/'}}>
+                  <Paragraph copyable={{text: 'https://www.linkedin.com/in/anani-oluwatobi/'}}>
                   <a onClick={()=>{ 
                      ReactGa.event({
                       category: 'User',
@@ -143,7 +143,11 @@ class AboutView extends React.Component {
                 <div className="education-container">
                   <h3 className="top-right-section-box-header">Education</h3>
 
-                  <ul>
+                  <ul style={{overflow: 'auto',height: '95px', width: '90%'}}>
+                    <li>
+                      <p className="education-title">Poise Nigeria</p>
+                      <p className="education-location">Software development and Soft skills - 2020 – 2021</p>
+                    </li>
                     <li>
                       <p className="education-title">High School Certificate</p>
                       <p className="education-location">Intellect companion classic college - 2016 - 2018</p>
