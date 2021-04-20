@@ -32,7 +32,7 @@ const socialButton = [{
     {
         name: "Linkedin",
         icon: < LinkedinOutlined className="social-svg"/ > ,
-        link: "https://www.linkedin.com/in/anani-oluwatobiloba-967728183/",
+        link: "https://www.linkedin.com/in/anani-oluwatobi/",
         color: "#0e76a8"
     },
     {
